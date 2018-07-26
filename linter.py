@@ -106,7 +106,6 @@ class Elixirc(Linter):
 
     """
 
-    syntax = ("elixir")
     tempfile_suffix = "-"
 
     regex_parts = (
@@ -144,7 +143,8 @@ class Elixirc(Linter):
     defaults = {
         "include_dirs": [],
         "pa": [],
-        "mix": False
+        "mix": False,
+        "selector": "source.ex - meta.attribute-with-value, source.exs, source.eex"
     }
 
     #
